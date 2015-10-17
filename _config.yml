@@ -8,14 +8,14 @@ kramdown:
 author: 
   name: chiyiw
   email: wp941019@126.com
-  link: http://chiyiw.gitcafe.io
+  link: http://chiyiw.github.io
   weibo: http://weibo.com/iFlower
   github: http://github.com/chiyiw
 
 # 站点信息
 title: chiyiw's blog
 description: chiyiw's博客
-url: http://chiyiw.gitcafe.io
+url: http://chiyiw.github.io
 rss_url: /pages/atom.xml
 
 #多说配置
