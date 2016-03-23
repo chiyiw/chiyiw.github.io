@@ -1,4 +1,8 @@
-﻿# Android ListView 优化
+﻿---
+layout: post
+---
+
+# Android ListView 优化
 
 ---
 

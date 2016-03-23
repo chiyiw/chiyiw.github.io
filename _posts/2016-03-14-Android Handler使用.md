@@ -1,4 +1,8 @@
-﻿# Android Handler使用
+﻿---
+layout: post
+---
+
+# Android Handler使用
 
 ---
 

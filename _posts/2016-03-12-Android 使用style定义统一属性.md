@@ -1,4 +1,8 @@
-﻿# Android 使用style定义统一属性
+﻿---
+layout: post
+---
+
+# Android 使用style定义统一属性
 
 ### 在styles.xml中定义style
 

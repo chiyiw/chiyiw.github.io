@@ -1,4 +1,8 @@
-﻿# Android SQLite 的使用
+﻿---
+layout: post
+---
+
+# Android SQLite 的使用
 
 ---
 

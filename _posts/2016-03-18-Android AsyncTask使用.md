@@ -1,4 +1,8 @@
-﻿# Android AsyncTask使用
+﻿---
+layout: post
+---
+
+# Android AsyncTask使用
 
 ---
 

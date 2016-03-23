@@ -1,4 +1,8 @@
-﻿# Android Adapter笔记
+﻿---
+layout: post
+---
+
+# Android Adapter笔记
 
 ---
 
