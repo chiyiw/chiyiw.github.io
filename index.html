@@ -1,19 +1,45 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>chiyiw's blog</title>
-	<link rel="stylesheet" type="text/css" href="base.lib.min.css">
-	<link rel="stylesheet" type="text/css" href="desert-cmd.css">
-	<!-- <link rel="stylesheet" type="text/css" href="prettify-cmd.css"> -->
-	<link rel="stylesheet" type="text/css" href="layout.min.css">
-	<link rel="stylesheet" type="text/css" href="mdeditor.lib.min.css">
-</head>
-<body class="theme-black">
-	<div id="wmd-preview" class="wmd-preview wmd-preview-full-reader">
-		<h1>chiyiw的小黑屋</h1>
-		<a href="Android Fragment 笔记.html">Android Fragment 笔记</a>
-	</div>
-</body>
-</html>
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">所有文章</h1>
+
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%Y.%-m.%-d" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+  {% if paginator.total_pages > 1 %}  
+    {% if paginator.previous_page %}  
+        <a href="{{ paginator.previous_page_path }}">上一页</a>  
+    {% endif %}  
+  {% endif %}  
+
+  {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <span class="active">{{ page }}</span>
+      {% elsif page == 1 %}
+        <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+      {% else %}
+        <a href="{{ '/page' | prepend: site.baseurl | replace: '//', '/'}}{{ page }}">{{ page }}</a>
+      {% endif %}
+  {% endfor %}
+
+  {% if paginator.total_pages > 1 %}  
+    {% if paginator.next_page %}  
+        <a href="{{ paginator.next_page_path }}">下一页</a>  
+    {% endif %}  
+  {% endif %}  
+
+  <p class="rss-subscribe">订阅 <a href="{{ "/feed.xml" | prepend: site.baseurl }}"> RSS</a></p>
+</div>

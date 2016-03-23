@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+    {% include head.html %}
+
+    <body class="theme-black">
+        {% include header.html %}
+
+            <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader">
+                <div class="top-line"></div>
+                {{ content }}
+            </div>
+
+        {% include footer.html %}
+
+    </body>
+</html>
