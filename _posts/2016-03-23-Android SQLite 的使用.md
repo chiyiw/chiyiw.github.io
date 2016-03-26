@@ -11,6 +11,7 @@ layout: post
 Android系统提供了`SQLiteOpenHelper`用于打开数据库
 
 继承`SQLiteOpenHelper`创建OpenHelper
+
 ```java
 public class DBOpenHelper extends SQLiteOpenHelper {
     public DBOpenHeloer(Context context){
@@ -31,6 +32,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 ```
 
 ## 操作数据表
+
 ```java
 public class DBOperator {
     
@@ -56,6 +58,7 @@ public class DBOperator {
 可以使用命令行或第三方软件打开*.db文件
 
 命令行：
+
 ```
 adb shell
 root@.. > sqlite3 data/data/包名/databases/名称.db

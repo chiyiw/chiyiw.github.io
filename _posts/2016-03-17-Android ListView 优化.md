@@ -11,6 +11,7 @@ layout: post
 getView 在每个Item出现在视图中时都要执行，其中的`inflate`过程耗时，优化即对`inflate`过程进行重用
 
 ## 实现
+
 ```java
 @Override
 public View getView(...){
@@ -19,6 +20,7 @@ public View getView(...){
     }
 }
 ```
+
 ## 原理2
 
 每次`getView()`被调用，子控件都要重新`new`,即分配内存，优化即对子控件进行重用
@@ -51,6 +53,7 @@ class ViewHolder{
     TextView tv;
 }
 ```
+
 ## 思考
 
 如果界面每次只能显示三个Item
