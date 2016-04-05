@@ -319,13 +319,13 @@ body {
 
 /*针对手机的代码换行优化*/
 @media screen and (max-width: 800px) {
-    pre::-webkit-scrollbar {
+    /*pre::-webkit-scrollbar {
         height: 3px;
     }
 
     pre::-webkit-scrollbar-thumb {
         background: #666;
-    }
+    }*/
 
     pre code {
         white-space:pre;
