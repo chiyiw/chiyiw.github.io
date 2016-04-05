@@ -46,7 +46,7 @@ public class HelloWorld {
         String result = HelloWorld.sayHello("chiyiw");
         System.out.println(result);
     }
-    
+
     static {
         System.loadLibrary("HelloWorld"); // 加载类库
     }
@@ -91,7 +91,7 @@ JNIEXPORT jstring JNICALL Java_HelloWorld_sayHello
 
 | 参数 | 含义 |
 | --- | :--- |
-| JNIEnv | 指向 VM 中的java方法的指针 
+| JNIEnv | 指向 VM 中的java方法的指针
 | jclass | 调用 方法的对象或类（当方法为static时） |
 | jstring | 传入参数 |
 
@@ -129,18 +129,6 @@ JNIEXPORT jstring JNICALL Java_HelloWorld_sayHello
 
 ```cmd
 F:\Code\Android\JNI\Helloworld\jni>cl -I"%JAVA_HOME%\include" -I"%JAVA_HOME%\include\win32" -LD HelloWorld.c -FeHelloWorld.dll
-用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.00.23506 版
-版权所有(C) Microsoft Corporation。保留所有权利。
-
-HelloWorld.c
-Microsoft (R) Incremental Linker Version 14.00.23506.0
-Copyright (C) Microsoft Corporation.  All rights reserved.
-
-/dll
-/implib:HelloWorld.lib
-/out:HelloWorld.dll
-HelloWorld.obj
-  正在创建库 HelloWorld.lib 和对象 HelloWorld.exp
 
 F:\Code\Android\JNI\Helloworld\jni>
 ```
