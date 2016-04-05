@@ -343,7 +343,7 @@ body {
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 45px 0 0 rgba(0, 0, 0, 0) inset, 0 1px 0 #333;
     }
     ol.linenums > li {
-        padding-left: 5px;
+        padding-left: 0px;
     }
 }
 
