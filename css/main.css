@@ -338,7 +338,7 @@ body {
 
 /*}*/
 
-code {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+pre ol {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
