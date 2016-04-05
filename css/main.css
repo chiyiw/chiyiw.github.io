@@ -320,7 +320,7 @@ body {
 /*针对手机的代码换行优化*/
 @media screen and (max-width: 800px) {
     pre::-webkit-scrollbar {
-        height: 3px;
+        height: 1px;
     }
 
     pre::-webkit-scrollbar-thumb {
@@ -336,6 +336,7 @@ body {
     pre {
         white-space:nowrap;
         overflow: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     pre.prettyprint{
