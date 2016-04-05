@@ -3,7 +3,17 @@ window.onload = function(){
     alterClassByTagName("pre","prettyprint prettyprint linenums");
     prettyPrint();
 
-    setTheme("black");
+    var theme = "black";
+    setTheme(theme);
+
+    document.getElementById('bulb').onclick=function(){
+        if (theme == "black"){
+            theme = "white";
+        }else{
+            theme = "black";
+        }    
+        setTheme("theme");  
+    }
 }
 
 // 通过Tag替换class
