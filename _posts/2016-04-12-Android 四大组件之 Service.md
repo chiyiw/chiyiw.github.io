@@ -2,7 +2,7 @@
 layout: post
 ---
 
-﻿# Android 四大组件之 Service
+# Android 四大组件之 Service
 
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 ---
 
-﻿# Android AndFix 热修复初探
+# Android AndFix 热修复初探
 
 ---
 
