@@ -22,7 +22,7 @@ RxAndroid + Retorfit = 牛（zhuang）B
     {
         "ID": 31614,
         "Content": "材料学院消息：为进一步提高我院2013级学生的考研热情，明确考研目标......",
-        "PicUrl": "http://common.ncuhome.cn/UploadFiles/Image/2016-04/635954376703590756.jpg",
+        "PicUrl": "http://common.ncuhome.cn/UploadFiles/Image/2016-04/6359543767030756.jpg",
         "CreateTime": "2016/4/5 21:55:16",
         "newstitle": "材料学院：考研保研交流会顺利举行",
         "rowcount": 0,
@@ -31,7 +31,7 @@ RxAndroid + Retorfit = 牛（zhuang）B
     {
         "ID": 31613,
         "Content": "眼视光学院消息：惠风和畅前湖暖，杨柳新姿学子忙。三月既是春暖花开......",
-        "PicUrl": "http://common.ncuhome.cn/UploadFiles/Image/2016-04/63595324058898519.jpg",
+        "PicUrl": "http://common.ncuhome.cn/UploadFiles/Image/2016-04/635953240588519.jpg",
         "CreateTime": "2016/4/5 21:47:08",
         "newstitle": "三月学雷锋——眼视光学院前湖环保行动",
         "rowcount": 0,
@@ -58,7 +58,7 @@ public class News {
 
 参考自 Retrofit 的 [官方文档](https://square.github.io/retrofit)
 
-1. 准备工作
+1.准备工作
 首先，添加 库
 
 ```
@@ -68,7 +68,7 @@ compile "com.squareup.retrofit2:converter-gson:${retrofit}"
 
 新建类`News` ,建议使用 插件`GsonFormat`一键转化
 
-2. 新建`NcuServices`接口
+2.新建`NcuServices`接口
 
 ```java
 public interface NcuServices {
@@ -78,7 +78,7 @@ public interface NcuServices {
 ```
 Retrofit 通过注解生成路由，`@Query(key) type value` 既是添加进 url 的参数，又是 getNcuNews()的参数，实现了高耦合配置。
 
-3. 定义`NcuApi`, 实现接口
+3.定义`NcuApi`, 实现接口
 
 ```java
 public class NcuApi {
@@ -103,7 +103,7 @@ public class NcuApi {
 }
 ```
 
-4. 使用方式
+4.使用方式
 
 ```java
 public class MainActivity extends AppCompatActivity {
