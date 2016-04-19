@@ -59,7 +59,7 @@ public class HelloWorld {
 javac src\HelloWorld.java -d .\bin
 ```
 
-### 3. javah生成对应.h头文件
+### 3. javah -jni 生成对应.h头文件
 
 ```
 javah -jni -classpath .\src -d .\jni HelloWorld
@@ -103,7 +103,7 @@ JNIEXPORT jstring JNICALL Java_HelloWorld_sayHello
 JNIEXPORT jstring JNICALL Java_HelloWorld_sayHello
   (JNIEnv *env, jclass cla, jstring j_str){
     // jstring 转化为 char*
-    const char* name = (*env)->getStringUTFChars(env, j_str, NULL);
+    const char* name = (*env)->GetStringUTFChars(env, j_str, NULL);
     printf("Hello %s\n");
     // char* 转化为 jstring
     return (*env)->NewStringUTF(env, "from jni");
@@ -134,6 +134,12 @@ F:\Code\Android\JNI\Helloworld\jni>
 ```
 
 编译完成，jni目录下自动生成了.dll文件
+
+Linux 下：
+
+```
+gcc -I$JAVA_HOME/include -I$JAVA_HOME/include/linux -fPIC -shared HelloWorld.c -o libHelloWorld.so
+```
 
 ### 5. java运行HelloWorld
 
