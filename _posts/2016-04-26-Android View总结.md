@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 # Android View总结
 
 ---
