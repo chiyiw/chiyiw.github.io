@@ -47,3 +47,72 @@ setContentView() -> {
 ## View 树
 
 也就是所说的控件树。由多个 ViewGroup 和 View 组成。
+
+View 的绘制要经过三个流程，measure、layout、draw。这三个方法分别调用onMeasure、onLayout、onDraw
+
+关于 View 的 measure 流程，下面的文章总结的太好了，就不再赘述了。
+[Android View体系（七）从源码解析View的measure流程](http://mojijs.com/2016/03/215007/index.html)
+
+流程 
+
+```
+measure -> onMeasure(widthSpec, heightSpec)  
+```
+
+```
+// 测量规则
+1. MeasureSpec.EXACTLY // 精确
+2. MeasureSpec.AT_MOST // 最大值
+3. MeasureSpec.UNSPECIFIED //不确定
+
+对应关系：
+match_parent 或"固定值" -> EXACTLY -> 直接赋值父控件传递的值
+
+                        / 给定了新值 -> min( 新值，父控件传递的值 )
+wrap_content -> AT_MOST 
+                        \ 没有给定新值 -> 直接赋值父控件传递的值
+```
+
+对于系统自带控件，内部实现了 测量新值的逻辑，自定义控件，需要自己写。下面以 TextView 为例，源码中这样写道：
+
+```js
+onMeasure(widthSpec, heightSpec){
+    match_parent -> EXACTLY -> 直接赋值 width = widthSpec.getSize
+    else {
+        des = desired(mLayout) { max( TextView 中每一行文字的个数*cell )}
+        width = des
+        width = max( 
+            width, 
+            getSuggestMinimumWidth(){ min( 
+                mMinWidth, // layout 中的 minWidth 属性，默认 0
+                mBackgroud.getMinimumWidth() // layout 中的 background 属性
+                )}
+            )
+        
+        if (wrap_content -> AT_MOST) {
+            width = min( width, widthSpec.getSize )
+        }
+    }
+    
+    ... // 此处省略了 height 的测量
+    setMeasuredDimension(width, height);
+}
+```
+
+而对于我们简单的使用 TextView, 不设置 minWidth,不设置背景(这也是最常用的设置),一下为简化流程
+
+```js
+onMeasure(widthSpec, heightSpec){
+    int specSzie = widthSpec.getSize()
+    
+    if( match_parent || "?dp" -> EXACTLY ) { 
+        width = specSzie 
+    }else {
+        width = max( TextView 每一行的字数 * 字宽) // 系统测量关键步骤
+        if( wrap_content -> AT_MOST ) {
+            width = min(width, specSzie)
+        }
+    } 
+    setMeasuredDimension(width, height);
+} 
+```
