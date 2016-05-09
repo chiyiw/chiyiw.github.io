@@ -44,21 +44,22 @@ function setTheme(theme){
         alterAttributeByClassName("site-title","style","color:#eee");
         alterAttributeByClassName("page-link","style","color:#eee");
         alterAttributeByClassName("post-link","style","color:#eee");
-        alterAttributeByClassName("ds-comments","style","background:#333");
+        alterAttributeByClassName("ds-post","style","background:#333");
         alterAttributeByClassName("ds-textarea-wrapper","style","background:#252525;border-width:1px");
         alterAttributeByClassName("ds-post-options","style","background:#555");
+
 
     } else {
         document.body.setAttribute("class","theme-white");
         alterClassByTagName("blockquote","white-blockquote");
         var link = document.getElementsByTagName("link")[1];
-        link.setAttribute("href","/css/prettify-cmd.css");
+        link.setAttribute("href","/css/prettify-chiyiw.css");
 
         alterAttributeByClassName("highlighter-rouge","style","background:#f2f2f2;color:#000");
         alterAttributeByClassName("site-title","style","color:#000");
         alterAttributeByClassName("page-link","style","color:#000");
         alterAttributeByClassName("post-link","style","color:#000");
-        alterAttributeByClassName("ds-comments","style","background:#eee");
+        alterAttributeByClassName("ds-post","style","background:#eee");
         alterAttributeByClassName("ds-textarea-wrapper","style","background:#ddd;border-width:0px");
         alterAttributeByClassName("ds-post-options","style","background:#eaeaea");
     }
