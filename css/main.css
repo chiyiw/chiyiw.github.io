@@ -398,7 +398,7 @@ pre code {
     ol.linenums > li {
         padding-left: 0px;
         white-space: pre;
-        display: inline-block; /*不换行关键代码*/
+        display: inline-grid; /*不换行关键代码*/
     }
     ol.linenums {
         margin-left: 0px;
