@@ -330,7 +330,7 @@ body {
 }
 
 /*针对手机的代码换行优化*/
-@media screen and (max-width: 400px) {
+/*@media screen and (max-width: 400px) {
     pre::-webkit-scrollbar {
         height: 1px;
     }
@@ -349,7 +349,6 @@ body {
         white-space: nowrap;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
-        /*display: block;*/
     }
 
     pre.prettyprint{
@@ -358,6 +357,47 @@ body {
     ol.linenums > li {
         padding-left: 0px;
         white-space: pre;
+    }
+}*/
+
+pre {
+  padding: 1em;
+  font: .9em/1.5 Consolas, Monaco, 'Andale Mono', monospace;
+  border: 1px solid #e5e8ec;
+  border-radius: 3px;
+  background-color: #fdfdfd;
+  background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: -o-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-size: 3em 3em;
+  background-origin: content-box;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+  pre::-webkit-scrollbar {
+    height: 7px; }
+  pre::-webkit-scrollbar-thumb {
+    background: #e5e8ec; }
+    pre::-webkit-scrollbar-thumb:hover {
+      background: #d6dbe1; }
+
+pre code {
+    white-space: pre;
+}
+
+ol.linenums > li {
+    padding-left: 0px;
+    white-space: pre;
+    display: inline-block;
+}
+/*针对手机的代码换行优化*/
+@media screen and (max-width: 400px) {
+    pre::-webkit-scrollbar {
+        height: 1px;
+    }
+    pre.prettyprint{
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 45px 0 0 rgba(0, 0, 0, 0) inset, 0 1px 0 #333;
     }
 }
 
