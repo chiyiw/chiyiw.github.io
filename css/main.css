@@ -343,7 +343,6 @@ body {
         white-space:pre;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
-        display: inline-block;
     }
 
     pre {
@@ -375,3 +374,4 @@ pre {
         overflow: auto;
         -webkit-overflow-scrolling: touch;
     }
+
