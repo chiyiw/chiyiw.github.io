@@ -349,7 +349,7 @@ body {
 }
 
 pre {
-    overflow: auto;
+    overflow: scroll;
 }
 pre::-webkit-scrollbar {
     height: 5px;
