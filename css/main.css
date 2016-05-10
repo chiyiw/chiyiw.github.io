@@ -362,7 +362,6 @@ body {
 
 pre {
     overflow: auto;
-    display: block;
 }
     pre::-webkit-scrollbar {
         height: 5px;
