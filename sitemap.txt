@@ -1,5 +1,5 @@
 ---
-title : Sitemap
+layout : null
 ---
 
 {% for page in site.pages %}
