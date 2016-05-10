@@ -359,11 +359,11 @@ pre code {
 /*针对手机的代码换行优化*/
 @media screen and (max-width: 400px) {
     pre {
-        background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-        background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-        background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-        background-image: -o-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-        background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+        background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.02) 50%);
+        background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.02) 50%);
+        background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.02) 50%);
+        background-image: -o-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.02) 50%);
+        background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.02) 50%);
         background-size: 3em 3em;
         background-origin: content-box;
     }
