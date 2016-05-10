@@ -340,7 +340,7 @@ body {
     }
 
     pre code {
-        white-space:pre;
+        white-space:nowrap;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
     }
@@ -358,20 +358,4 @@ body {
         padding-left: 0px;
     }
 }
-
-pre {
-    overflow: auto;
-}
-    pre::-webkit-scrollbar {
-        height: 5px;
-    }
-    pre::-webkit-scrollbar-thumb {
-        background: #666;
-    }
-
-    pre code {
-        white-space:pre;
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
-    }
 
