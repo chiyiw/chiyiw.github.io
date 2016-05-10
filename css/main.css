@@ -340,13 +340,13 @@ body {
     }
 
     pre code {
-        white-space:nowrap;
+        white-space: nowrap;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
     }
 
     pre {
-        white-space:nowrap;
+        white-space: nowrap;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
         /*display: block;*/
