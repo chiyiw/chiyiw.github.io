@@ -343,13 +343,13 @@ body {
         white-space:pre;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
-
     }
 
     pre {
         white-space:pre;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
+        /*display: block;*/
     }
 
     pre.prettyprint{
@@ -357,6 +357,7 @@ body {
     }
     ol.linenums > li {
         padding-left: 0px;
+        white-space: pre;
     }
 }
 
