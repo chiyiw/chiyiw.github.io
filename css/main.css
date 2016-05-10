@@ -343,10 +343,11 @@ body {
         white-space:pre;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
+        display: inline-block;
     }
 
     pre {
-        white-space:nowrap;
+        white-space:pre;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
     }
@@ -361,6 +362,7 @@ body {
 
 pre {
     overflow: auto;
+    display: block;
 }
     pre::-webkit-scrollbar {
         height: 5px;
