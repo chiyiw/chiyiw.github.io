@@ -346,7 +346,7 @@ body {
     }
 
     pre {
-        white-space:pre;
+        white-space:nowrap;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
     }
