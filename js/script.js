@@ -5,6 +5,7 @@ window.onload = function(){
 
     var theme = "black";
     setTheme(theme);
+    alterPathAttribute(theme);
 
     document.getElementById('bulb').onclick=function(){
         if (theme == "black"){
@@ -13,6 +14,7 @@ window.onload = function(){
             theme = "black";
         }    
         setTheme(theme);
+        alterPathAttribute(theme);
     }
 
 }
@@ -47,7 +49,7 @@ function setTheme(theme){
         alterAttributeByClassName("ds-post","style","background:#333");
         alterAttributeByClassName("ds-textarea-wrapper","style","background:#252525;border-width:1px");
         alterAttributeByClassName("ds-post-options","style","background:#555");
-
+        alterAttributeByClassName('site-nav','style','background:#444');
 
     } else {
         document.body.setAttribute("class","theme-white");
@@ -62,6 +64,8 @@ function setTheme(theme){
         alterAttributeByClassName("ds-post","style","background:#eee");
         alterAttributeByClassName("ds-textarea-wrapper","style","background:#ddd;border-width:0px");
         alterAttributeByClassName("ds-post-options","style","background:#eaeaea");
+        alterAttributeByClassName('site-nav','style','background:#f9f9f5');
+
     }
 }
 
@@ -73,3 +77,16 @@ function alterAttributeByClassName(classname,attrname,attrvalue){
     }
 }
 
+
+function alterPathAttribute(theme){
+    var eles = document.getElementsByTagName('path');
+    if (theme == 'black'){
+        for (var i = 0; i < eles.length; i++){
+            eles[i].setAttribute('fill','#eee');
+        }
+    }else{
+        for (var i = 0; i < eles.length; i++){
+            eles[i].setAttribute('fill','#444');
+        }
+    }
+}
