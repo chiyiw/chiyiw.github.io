@@ -89,8 +89,8 @@
         position: absolute;
         top: 9px;
         right: 15px;
-        background-color: #fdfdfd;
-        border: 1px solid #e8e8e8;
+        background-color: #444;
+        border: 0px solid #e8e8e8;
         border-radius: 5px;
         text-align: right;
     }
@@ -111,7 +111,7 @@
     }
 
     .site-nav .menu-icon > svg path {
-        fill: #424242;
+        fill: #eee;
     }
 
     .site-nav .trigger {
@@ -231,6 +231,7 @@
     list-style: none;
     clear: both;
     border-bottom: 1px #eee dashed;
+    
 }
 .post-list > li > h2 {
     margin: 0;
