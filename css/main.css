@@ -94,6 +94,7 @@
         border: 0px solid #e8e8e8;
         border-radius: 5px;
         text-align: right;
+        z-index: 1;
     }
 
     .site-nav .menu-icon {
