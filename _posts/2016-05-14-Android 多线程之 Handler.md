@@ -8,9 +8,9 @@ layout: post
 
 ## Handler 工作机制
 
-Thread1 发送 Handler 到消息队列 MessageQueue
-Thread2 发送 Handler 到消息队列 MessageQueue
-MessageQueue 中保存多个 Message
+Thread1 发送 Handler 到消息队列 MessageQueue <br>
+Thread2 发送 Handler 到消息队列 MessageQueue <br>
+MessageQueue 中保存多个 Message 
 
 UI主线程 通过 Looper 从 MessageQueue 中逐个取出 Message 处理
 
@@ -33,7 +33,7 @@ msg.what = 2; // 标识，用来区分各个线程
 msg.arg1 = 5; // int数据可以用arg传递
 msg.obj = "hahaha"; // Object类型的数据可以用obj传递
 msg.setData(Bundle); // 传递复杂类型 
-handler.sendMessage(msg);
+handler.sendMessage(msg); // 将消息发出
 ```
 
 > handler定义在哪儿就属于哪个线程，如果定义在UI主线程中就可以在处理函数中更改界面
@@ -80,11 +80,11 @@ public class MainActivity extends Activity {
 
 ## 没有主线程的 handler，如何更新 UI
 
-这个问题在我百度二面的时候被问到，场景是这样的：
+这个问题在我百度二面的时候被问到，场景是这样的： <br>
 handler 无法从主线程创建，也无法通过参数传递进子线程中，如何“自力更生”，去更新UI？
 
-*我们知道，子线程中不能直接更新UI*，如何做到
-1.使用Looper.getMainLooper(),这个静态方法可以获取到主线程的Looper
+*我们知道，子线程中不能直接更新UI*，如何做到<br>
+1.使用Looper.getMainLooper(),这个静态方法可以获取到主线程的Looper<br>
 2.使用new Handler(Looper)创建handler，这种构造可以指定Looper，如果不指定，默认当前线程，如果要更新UI，明显不能这么做。
 
 ```java
