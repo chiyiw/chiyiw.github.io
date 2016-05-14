@@ -8,11 +8,11 @@ layout: post
 
 ## Handler 工作机制
 
-Thread1 发送 Handler 到消息队列 MessageQueue <br>
-Thread2 发送 Handler 到消息队列 MessageQueue <br>
+Thread1 用 Handler 发送 Message 到消息队列 MessageQueue <br>
+Thread2 用 Handler 发送 Message 到消息队列 MessageQueue <br>
 MessageQueue 中保存多个 Message 
 
-UI主线程 通过 Looper 从 MessageQueue 中逐个取出 Message 处理
+UI主线程 通过 Looper 从 MessageQueue 中逐个取出 Message，由 handler.handlerMessage 处理
 
 ```java
 // 处理消息
