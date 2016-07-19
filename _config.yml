@@ -9,9 +9,7 @@
 title: chiyiw's 小黑屋
 email: wp941019@126.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Record and share my experience about programming or study,such as Android,Linux,Docker,Data mine etc.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://chiyiw.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
