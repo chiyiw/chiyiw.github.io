@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: Android
 ---
 
 # RxAndroid 与 Retrofit实战

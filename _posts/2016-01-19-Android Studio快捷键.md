@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: Android
 ---
 
 # Android Studio 快捷键

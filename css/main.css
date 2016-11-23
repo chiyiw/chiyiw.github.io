@@ -325,6 +325,12 @@ body {
 }
 */
 
+@media screen and (max-width: 1240px) {
+    .nav-left {
+        display: none;
+    }
+}
+
 @media (max-width: 979px) {
     body {
         padding-left: 20px;
@@ -385,5 +391,23 @@ pre code {
     ol.linenums {
         margin-left: 0px;
     }
+    .nav-left {
+        display: none;
+    }
 }
 
+.nav-left {
+    position: absolute;
+    /*opacity: 0;*/
+    margin-left:-200px;
+}
+.col-box-author {
+    text-align: center;
+}
+.col-box-author .avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    margin: 20px auto;
+    display: block;
+}

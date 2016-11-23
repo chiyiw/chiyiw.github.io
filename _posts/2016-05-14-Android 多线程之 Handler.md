@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: Android
 ---
 
 # Android 多线程之 Handler

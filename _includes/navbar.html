@@ -1,0 +1,33 @@
+<div class="col-box col-box-author">
+  <img class="avatar" src="{{ site.avatar }}" alt="{{ site.author }}">
+  <div class="col-box-title name">{{ site.author }}</div>
+  <p>{{ site.profile }}</p>
+  <p class="contact">
+    {% if site.github_username %}
+    <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+    {% endif %}
+    {% if site.twitter_username %}
+    <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
+    {% endif %}
+    {% if site.email %}
+    <a href="mailto:{{ site.email }}">Email</a>
+    {% endif %}
+  </p>
+</div>
+
+
+<div class="col-box">
+  <div class="col-box-title">分类</div>
+  <ul class="post-list">
+{% capture categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign category = categories | split:',' | sort %}
+{% for item in (0..site.categories.size) %}{% unless forloop.last %}
+{% capture word %}{{ category[item] | strip_newlines }}{% endcapture %}
+<li><a class="category" id="{{ word }}" style="margin:5px" href="{{ "/category/#" | prepend: site.baseurl | append: word }}">{{ word }}</a><span>({{ site.categories[word] | size }})</span></li>
+{% endunless %}{% endfor %}
+</ul>
+</div>
+
+<div class="col-box post-toc hide">
+  <div class="col-box-title">本文目录</div>
+</div>

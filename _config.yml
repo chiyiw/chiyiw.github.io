@@ -7,17 +7,20 @@
 
 # Site settings
 title: chiyiw's 小黑屋
+author: chiyiw
 email: wp941019@126.com
 description: > # this means to ignore newlines until "baseurl:"
   Record and share my experience about programming or study,such as Android,Linux,Docker,Data mine etc.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://chiyiw.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
+# twitter_username: jekyllrb
 github_username:  chiyiw
+avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
+profile: 做喜欢的事，一定能成功
 
 # Build settings
 markdown: kramdown
 
 gems: [jekyll-paginate]
-paginate: 10
+paginate: 12
 paginate_path: "page:num"

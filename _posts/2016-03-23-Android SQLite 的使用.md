@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: Android
 ---
 
 # Android SQLite 的使用

@@ -1,5 +1,6 @@
 // 自定义的javascript脚本
 window.onload = function(){
+    setLeftNav();
     alterClassByTagName("pre","prettyprint prettyprint linenums");
     prettyPrint();
 
@@ -17,7 +18,39 @@ window.onload = function(){
         alterPathAttribute(theme);
     }
 
+    // var ele = document.getElementsByClassName("nav-left")[0];
+    // fadeOut(ele);
 }
+
+function setLeftNav(){
+    var screenWidth = document.body.clientWidth;
+    var leftBlankWidth = screenWidth/2-(850/2); // 左边还剩的宽度
+    if (leftBlankWidth < 160) {
+        alterAttributeByClassName('nav-left', 'style', 'display:none');
+    } else {
+        alterAttributeByClassName('nav-left', 'style', 'margin-left:'+(leftBlankWidth-154)+'px');
+    }
+}
+
+window.onresize = function(){
+        
+    setLeftNav();
+}
+
+// function fadeOut(ele){
+    
+//    var i = 0;
+//    var id = setInterval(function(){
+//         i++;
+//         ele.style.opacity = parseFloat(i)/100;
+//         if (i > 99) {
+//             clearInterval(id);
+//         }
+//         if (i > 101) {
+//             alert(i);
+//         }
+//    }, 15);
+// }
 
 // 通过Tag替换class
 function alterClassByTagName(tagname,classname){
@@ -57,7 +90,7 @@ function setTheme(theme){
         var link = document.getElementsByTagName("link")[1];
         link.setAttribute("href","/css/prettify-chiyiw.css");
 
-        alterAttributeByClassName("highlighter-rouge","style","background:#f2f2f2;color:#000");
+        alterAttributeByClassName("highlighter-rouge","style","background:#fffde9;color:#000");
         alterAttributeByClassName("site-title","style","color:#000");
         alterAttributeByClassName("page-link","style","color:#000");
         alterAttributeByClassName("post-link","style","color:#000");

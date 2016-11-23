@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: Android
 ---
 
 # Android Fragment 笔记

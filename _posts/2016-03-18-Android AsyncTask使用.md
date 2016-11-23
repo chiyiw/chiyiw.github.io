@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: Android
 ---
 
 # Android AsyncTask使用

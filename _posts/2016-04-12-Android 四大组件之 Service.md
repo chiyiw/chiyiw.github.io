@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: Android
 ---
 
 # Android 四大组件之 Service

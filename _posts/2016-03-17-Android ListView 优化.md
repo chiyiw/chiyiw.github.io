@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: Android
 ---
 
 # Android ListView 优化

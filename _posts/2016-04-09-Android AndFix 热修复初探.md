@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: Android
 ---
 
 # Android AndFix 热修复初探

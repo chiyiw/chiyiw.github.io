@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: Android
 ---
 
 # Android View总结

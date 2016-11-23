@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: Android
 ---
 
 # Android 使用style定义统一属性
