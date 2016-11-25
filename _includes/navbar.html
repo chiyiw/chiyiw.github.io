@@ -23,7 +23,7 @@
 {% assign category = categories | split:',' | sort %}
 {% for item in (0..site.categories.size) %}{% unless forloop.last %}
 {% capture word %}{{ category[item] | strip_newlines }}{% endcapture %}
-<li><a class="category" id="{{ word }}" style="margin:5px" href="{{ "/category/#" | prepend: site.baseurl | append: word }}">{{ word }}</a><span>({{ site.categories[word] | size }})</span></li>
+<li><a class="category" id="{{ word }}" style="margin:5px" href="{{ "/category.html#" | prepend: site.baseurl | append: word }}">{{ word }}</a><span>({{ site.categories[word] | size }})</span></li>
 {% endunless %}{% endfor %}
 </ul>
 </div>
