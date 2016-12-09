@@ -7,6 +7,7 @@ categories: [日常]
 tags: [Docker]
 group: archive
 icon: globe
+categories: docker
 ---
 
 # Docker安装和基本配置

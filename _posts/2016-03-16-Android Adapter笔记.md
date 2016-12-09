@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: Android
 ---
 
 # Android Adapter笔记

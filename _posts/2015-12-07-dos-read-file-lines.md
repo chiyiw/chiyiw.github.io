@@ -7,6 +7,7 @@ categories: [日常]
 tags: [Dos批处理]
 group: archive
 icon: globe
+categories: 兴趣
 ---
 
 # Dos批处理读取文件的指定行数

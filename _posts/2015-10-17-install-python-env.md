@@ -7,6 +7,7 @@ categories: [日常]
 tags: [Flask]
 group: archive
 icon: globe
+categories: 兴趣
 ---
 
 # Python Flask环境本地搭建
