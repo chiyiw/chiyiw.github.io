@@ -5,21 +5,18 @@ categories: Android
 
 # Android 四大组件之 Service
 
----
-
-Service通常总是称之为“后台服务”，其中“后台”一词是相对于前台而言的，具体是指其本身的运行并不依赖于用户可视的UI界面。
+Service通常被称之为“后台服务”，其中“后台”一词是相对于前台而言的，具体是指其本身的运行并不依赖于用户可视的UI界面。
 
 ## 应用场景
 
-1. 并不依赖于用户可视的UI界面（当然，这一条其实也不是绝对的，如前台Service就是与Notification界面结合使用的）；
+1. 不依赖于用户可视的UI界面（当然，这一条其实也不是绝对的，如一般前台Service会与Notification界面结合使用）；
 
-2. 具有较长时间的运行特性。
-
----
+2. 需要长时间运行。
 
 ## Service 生命周期
 
 ### 1. startService调用
+
 onCreate() ==> onStartCommand()
 
 * 如果 Service 实例已经存在，startService只会调用 `onStartCommand`
@@ -35,8 +32,6 @@ onCreate() ==> onBind()
 
 > 注意：当按返回键或主页键，或屏幕旋转，都会导致Activity被销毁，下一次Activity的onCreate会被重新调用
 
----
-
 ## Activity 使用 startService(Intent) 操作 Service
 
 #### 1. AndroidManifest.xml 中指定 Action 对 Service 发送意图（Intent）
@@ -44,8 +39,8 @@ onCreate() ==> onBind()
 ```java
 <service android:name=".MusicService">
     <intent-filter>
-        <action android:name="org.chiyiw.music.start"/>
-        <action android:name="org.chiyiw.music.next"/>
+        <action android:name="com.chiyiw.music.start"/>
+        <action android:name="com.chiyiw.music.next"/>
     </intent-filter>
 </service>
 ```
@@ -57,7 +52,7 @@ onCreate() ==> onBind()
 
 ```java
 Intent intent = new Intent();
-intent.setAction("org.chiyiw.music.start");
+intent.setAction("com.chiyiw.music.start");
 this.startService(intent);
 ```
 
@@ -65,17 +60,15 @@ this.startService(intent);
 
 ```java
 Intent intent = new Intent();
-intent.setAction("org.chiyiw.music.next");
+intent.setAction("com.chiyiw.music.next");
 this.startService(intent);
 ```
 
 值得注意的是，第一次执行 startService 时，会调用 `onCreate` 和 `onStartCommand`, 当第二次调用时，Service 的实例已经存在，不会再调用 `onCreate`,但会重新调用 `onStartCommand`
 
----
-
 ## Activity 使用 bindService 操作 Service
 
-#### 1. Service 中自定义内部内 Binder 提供 服务获取
+#### 1. Service 中自定义内部类 Binder 提供 服务获取
 
 ```java
 // Binder 继承 IBinder
@@ -104,7 +97,7 @@ ServiceConnection connection = new ServiceConnection() {
         // ...此处可以对 service 实例执行操作
     }
 
-    @Override // 当service意外解除时执行
+    @Override // 当与service断开时执行
     public void onServiceDisconnected(ComponentName name) {
     }
 };
