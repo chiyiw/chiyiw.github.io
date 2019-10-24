@@ -20,7 +20,7 @@ Activity
     └── DecorView (FrameLayout)
       └── LinearLayout
         ├── TitleView (FrameLayout)
-        └── ContentView (FrameLayout)
+        └── ContentView (FrameLayout) 
 ```
 
 DecorView 是每一个可见Activity窗口的根 View,它本身是继承自 FrameLayout,是拓展的 FrameLayout 类，实现了窗口的一些操作，其对象内部有两个对象，分别是 TitleView 和 ContentView,也就是我们在 onCreate() 方法中用到的 `setContentView()`。我们在activity_main.xml 中定义的布局都是 addView 到了 ContentView 中。ActionBar 属于 TitleView,如果要去除 ActionBar 需要在 onCreate() 方法中调用 requestWindowFeature(Windwo.FEATURE_NO_TITLE)。 DecorView 将在调用 setContentView() 时被添加到 PhoneWindow 中，并显示出来，这也就是为什么 requestWindowFeature 需要在 setContentView 之前调用才有效的原因了，一旦执行了 setContentView, DecorView 已经被添加到了 PhoneWindow 中，requestWindowFeature 对其不发生作用。

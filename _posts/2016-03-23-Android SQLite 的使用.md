@@ -7,6 +7,8 @@ categories: Android
 
 ---
 
+SQLite是微型数据库，其所有的数据都存储在一个文件中，非常适合移动端数据存储，因此Android中默认提供了对SQLite的支持。
+
 ## 打开数据库
 
 Android系统提供了`SQLiteOpenHelper`用于打开数据库
@@ -54,9 +56,7 @@ public class DBOperator {
 
 ## 调试查看数据库
 
-使用File Explorer 打开 /data/data/包名/databases/ 可以找到建立的数据库，现在就要打开数据库
-
-可以使用命令行或第三方软件打开*.db文件
+使用File Explorer 打开 /data/data/包名/databases/ 可以找到建立的数据库，Android Debug Bridge(adb)提供了通过命令行管理sqlite的方式，也可以使用第三方软件打开*.db文件
 
 命令行：
 

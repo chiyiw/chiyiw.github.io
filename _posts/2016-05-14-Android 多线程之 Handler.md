@@ -5,15 +5,15 @@ categories: Android
 
 # Android 多线程之 Handler
 
----
+Handler是Android多线程通信的工具，多线程通过Handler相互发送消息，常用于从非主线程中更新主线程的UI界面。
 
 ## Handler 工作机制
 
-Thread1 用 Handler 发送 Message 到消息队列 MessageQueue <br>
-Thread2 用 Handler 发送 Message 到消息队列 MessageQueue <br>
+Thread1用Handler发送 Message1到消息队列 MessageQueue
+Thread2用Handler发送 Message2到消息队列 MessageQueue
 MessageQueue 中保存多个 Message 
 
-UI主线程 通过 Looper 从 MessageQueue 中逐个取出 Message，由 handler.handlerMessage 处理
+UI主线程通过 Looper 从 MessageQueue 中逐个取出 Message，由 handler.handlerMessage 处理
 
 ```java
 // 处理消息
@@ -37,7 +37,7 @@ msg.setData(Bundle); // 传递复杂类型
 handler.sendMessage(msg); // 将消息发出
 ```
 
-> handler定义在哪儿就属于哪个线程，如果定义在UI主线程中就可以在处理函数中更改界面
+说明：handler定义在哪儿就属于哪个线程，如果定义在UI主线程中就可以在处理方法（handlerMessage）中更改界面
 
 ## 使用实例
 
@@ -81,12 +81,12 @@ public class MainActivity extends Activity {
 
 ## 没有主线程的 handler，如何更新 UI
 
-这个问题在我百度二面的时候被问到，场景是这样的： <br>
+这个问题在我百度二面的时候被问到，场景是这样的：
 handler 无法从主线程创建，也无法通过参数传递进子线程中，如何“自力更生”，去更新UI？
 
-*我们知道，子线程中不能直接更新UI*，如何做到<br>
-1.使用Looper.getMainLooper(),这个静态方法可以获取到主线程的Looper<br>
-2.使用new Handler(Looper)创建handler，这种构造可以指定Looper，如果不指定，默认当前线程，如果要更新UI，明显不能这么做。
+*我们知道，子线程中不能直接更新UI*的。
+1.使用Looper.getMainLooper(),这个静态方法可以获取到主线程的Looper
+2.使用new Handler(Looper)创建handler，这种构造可以指定Looper，如果不指定，默认当前线程，如果要从非主线程更新UI，显然是需要指定Looper的。
 
 ```java
 public class MainActivity extends Activity {
